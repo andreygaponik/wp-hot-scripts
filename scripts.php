@@ -53,3 +53,33 @@
 	</a>
 
 <?php endforeach; ?>
+
+<?php 
+/**
+ * Хлебные крошки с переводом
+**/
+
+	$curlang = pll_current_language();
+
+	if ($curlang=='en') {
+	  $lang = 'Home';
+	}
+	elseif ($curlang=='ru') {
+	  $lang = 'Главная';
+	}
+	elseif ($curlang=='pl') {
+	  $lang = 'Główny';
+	}
+	elseif ($curlang=='be') {
+	  $lang = 'Галоўная';	
+	}
+
+	if( function_exists('kama_breadcrumbs') ){
+
+		$myl10n = array(
+			'home'       => $lang
+		);
+
+		kama_breadcrumbs(' > ', $myl10n );
+	}
+?>
