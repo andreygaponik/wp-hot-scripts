@@ -83,3 +83,10 @@
 		kama_breadcrumbs(' > ', $myl10n );
 	}
 ?>
+
+<?php 
+/**
+ * Просмотр документов в браузере
+**/
+?>
+<a href="http://docs.google.com/gview?url=<?php echo $link ?>" target="_blank" title="">Документ</a>
